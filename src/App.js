@@ -8,6 +8,7 @@ import QualityMachinery from "./components/pages/quality-machinery";
 import LType from "./components/pages/products/lTypeBlade";
 import CType from "./components/pages/products/cTypeBlade";
 import MaschioType from "./components/pages/products/maschioTypeBlade";
+import WhatsAppBtn from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         </Routes>
       </Layout>
       <Footer />
+      <WhatsAppBtn />
     </Router>
   );
 }

@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         handleDrawerToggle={handleDrawerToggle}
         navItems={navItems}
       />
-      <Box component="main" sx={{ p: 3, flexGrow: 1, width: "100%" }}>
+      <Box component="main" sx={{ p: 0, flexGrow: 1, width: "100%" }}>
         <Toolbar />
         {children}
       </Box>

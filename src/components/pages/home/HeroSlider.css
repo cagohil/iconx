@@ -1,0 +1,118 @@
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 6s ease-in-out;
+  }
+  
+  .slide-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .slide-title {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .slide-title.animate {
+    animation: slideUp 0.8s forwards;
+  }
+  
+  .slide-subtitle {
+    font-size: 1.5rem !important;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .slide-subtitle.animate {
+    animation: slideUp 0.8s 0.2s forwards;
+  }
+  
+  .nav-button {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    z-index: 2;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+  .nav-button-prev {
+    left: 20px;
+  }
+  
+  .nav-button-next {
+    right: 20px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: white;
+  }
+  
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

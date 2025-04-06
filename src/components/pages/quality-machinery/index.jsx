@@ -11,27 +11,26 @@ import {
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import blade from "../../../assests/heatblade.jpeg";
 import ImageListItemAll from "./imageList";
+import PageHeader from "../../PageHeader";
 
 const QualityMachinery = () => {
   const theme = useTheme();
-  return (
+  return (<>
+    <PageHeader
+        title="Quality & Machinery"
+        description="We have a world-class standard fully equipped with the latest manufacturing tools like Power presses, Shot Blasting Machine, and Electric furnace and everything is of the latest and finest version to create the latest innovation."
+      />
     <Box
       display="flex"
       flexDirection="column"
       alignItems="center"
-      sx={{ width: { xs: "100%", md: "80%" }, mx: "auto" }}
+      sx={{ width: { xs: "100%", md: "80%" }, mx: "auto", mb: "50px" }}
     >
       {/* ✅ First Section */}
 
       <Grid container spacing={4} justifyContent="center">
         {/* ✅ Left Side - Text */}
         <Grid item xs={12} md={6}>
-          <Typography variant="body1">
-            We have a world-class standard fully equipped with the latest
-            manufacturing tools like Power presses, Shot Blasting Machine, and
-            Electric furnace and everything is of the latest and finest version
-            to create the latest innovation.
-          </Typography>
           <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
             During our quality check, our main emphasis is on:
           </Typography>
@@ -118,6 +117,7 @@ const QualityMachinery = () => {
 
       <ImageListItemAll/>
     </Box>
+    </>
   );
 };
 
